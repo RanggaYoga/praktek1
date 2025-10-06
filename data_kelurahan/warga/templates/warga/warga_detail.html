@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Daftar Warga Kelurahan</title>
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fas fa-id-card icon"></i>Detail Warga</h1>
+
+        <div class="detail-item">
+            <span class="label">NIK:</span>
+            <span class="value">{{ object.nik }}</span>
+        </div>
+
+        <div class="detail-item">
+            <span class="label">Nama:</span>
+            <span class="value">{{ object.nama_lengkap }}</span>
+        </div>
+
+        <div class="detail-item">
+            <span class="label">Alamat:</span>
+            <span class="value">{{ object.alamat }}</span>
+        </div>
+
+        <div class="detail-item">
+            <span class="label">No Telepon:</span>
+            <span class="value">{{ object.no_telepon|default:"Tidak ada" }}</span>
+        </div>
+
+        <div class="detail-item">
+            <span class="label">Tanggal Registrasi:</span>
+            <span class="value">{{ object.tanggal_registrasi }}</span>
+        </div>
+        </br>
+        <a href="{% url 'warga-list' %}" class="back-link"><i class="fas fa-arrow-left"></i> Kembali ke List</a>
+    </div>
+</body>
+</html>
