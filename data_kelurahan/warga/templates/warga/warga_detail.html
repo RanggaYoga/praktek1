@@ -32,7 +32,9 @@
             <span class="value">{{ object.tanggal_registrasi }}</span>
         </div>
         </br>
-        <a href="{% url 'warga-list' %}" class="back-link"><i class="fas fa-arrow-left"></i> Kembali ke List</a>
+        <a href="{% url 'warga-list' %}" class="back-link"><i class="fas fa-arrow-left"></i> Kembali ke List</a> |
+        <a href="{% url 'warga-edit' object.pk %}">Edit Data</a> | 
+        <a href="{% url 'warga-hapus' object.pk %}">Hapus Data</a>
     </div>
     <hr>
     <h2>Daftar Pengaduan oleh {{ object.nama_lengkap }}</h2>

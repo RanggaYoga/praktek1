@@ -5,8 +5,9 @@
 </head>
 <body>
     <h1>Form Pengaduan Baru</h1>
+    <h2>{% if object %}Edit Pengaduan{% else %}Tambah Pengaduan Baru{% endif %}</h2>
     <form method="post">
-        {% csrf_token %}
+        {% csrf_token %}    
         {{ form.as_p }}
         <button type="submit">Simpan</button>
     </form>

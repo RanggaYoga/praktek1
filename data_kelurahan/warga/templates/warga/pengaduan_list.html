@@ -21,6 +21,10 @@
             <td>{{ pengaduan.judul }}</td>
             <td>{{ pengaduan.pelapor.nama_lengkap }}</td>
             <td>{{ pengaduan.tanggal_lapor|date:"d M Y H:i" }}</td>
+            <td>
+            <a href="{% url 'pengaduan-edit' pengaduan.pk %}">Edit</a> |
+            <a href="{% url 'pengaduan-delete' pengaduan.pk %}">Hapus</a>
+            </td>
         </tr>
         {% empty %}
         <tr>
